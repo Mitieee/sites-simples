@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ifrs star</title>
+    <style>
+        body {
+            margin: 0;   
+        }
+        .imgEstilo {
+            position: relative; 
+            width: 100vw;
+            height: 100vh; 
+        }
+        .imgEstilo img {
+            position: absolute; 
+            width: 100%;
+            height: 100%; 
+        }
+        .star {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            animation: moveStar 1s infinite; 
+             filter: hue-rotate(-330deg);
+
+        }
+        .background {
+            filter: blur(5px); 
+            animation: glow 1s infinite;
+        }
+        @keyframes moveStar {
+            0%, 100% {
+                clip-path: polygon(60% 0%, 61% 35%, 98% 35%, 68% 57%, 89% 81%, 50% 70%, 21% 81%, 32% 57%, 2% 45%, 39% 35%);
+            }
+            50% {
+                clip-path: polygon(55% 5%, 66% 40%, 100% 40%, 72% 62%, 83% 96%, 55% 75%, 24% 96%, 34% 62%, 5% 40%, 44% 40%);
+            }
+        }
+        @keyframes glow {
+            50%, 100% {
+                filter: brightness(0.1) blur(5px); 
+            }
+            50% {
+                filter: brightness(1.7) blur(0.1px); 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="imgEstilo">
+        <img src="http://webacademico.canoas.ifrs.edu.br/~rcpinto/IFRS/php/CSS-11-Efeitos/ifrscanoas.jpg" alt="fundo" class="background">
+        <img src="http://webacademico.canoas.ifrs.edu.br/~rcpinto/IFRS/php/CSS-11-Efeitos/ifrscanoas.jpg" alt="estrela" class="star">
+    </div>
+</body>
+</html>

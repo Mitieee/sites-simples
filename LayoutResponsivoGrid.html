@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Responsivo</title>
+    <style>
+        body, html {
+            font-family: Arial;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .centro{
+            display: grid;
+            grid-template-areas: 
+                "titulo titulo"
+                "menu main"
+                "footer footer";
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: 120px 1fr;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .titulo{
+            background-color: gainsboro;
+            grid-area: titulo;
+            font-size: 40px;
+            font-weight: bold;
+            border: 2px dashed silver;
+            border-radius: 10px;
+        }
+        .menu {
+            background-color: gainsboro;
+            border: 2px dashed silver;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 2px dashed silver;
+            border-radius: 10px;
+            background-color: gainsboro;
+            padding: 5px;
+        }
+
+        .box{
+            border: 2px dashed silver;
+            border-radius: 10px;
+            background-color: lightgray;
+            margin: 10px;
+            height: 250px;
+        }
+
+        .footer {
+            grid-area: footer;
+            text-align: right;
+            font-size: 20px;
+            border: 2px dashed silver;
+            border-radius: 10px;
+            background-color: gainsboro;
+            font-weight: normal;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .centro{
+                grid-template-areas: 
+                    "titulo titulo"
+                    "menu menu"
+                    "main main"
+                    "footer footer";
+                grid-template-columns: 1fr;
+            }
+
+            .main {
+                grid-template-columns: repeat(2, 1fr);
+                grid-area: main;
+            }          
+        }
+    </style>
+</head>
+<body>
+    <div class="centro">
+        <header class="titulo">Título</header>
+        <nav class="menu">Menu</nav>
+        <main class="main">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </main>
+        <footer class="footer">By Eu 2017</footer>
+    </div>
+</body>
+</html>

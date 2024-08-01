@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Mover</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial;
+            background-color: #f0f0f0;
+        }
+
+        .book {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+            
+        }
+
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            transform-origin: left;
+            transition: transform 1s, z-index 5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 30px;
+            background-color: white;
+            padding-top: 20px;
+        }
+
+        .cover {
+            background-color: maroon;
+        }
+
+        .back-cover {
+            transform: rotateY(-180deg);
+        }
+
+        .content-page1 {
+            z-index: 1;
+        }
+
+        .content-page2 {
+            z-index: 2;
+        }
+
+        .content-page1:hover {
+            transform: rotateY(-180deg);
+        }
+
+        .content-page2:hover {
+            transform: rotateY(-180deg);
+        }
+
+        .logo {
+            width: 100px; 
+            height: auto;
+            margin-top: 90px; 
+        }
+
+        .pagina {
+            text-align: center;
+            width: 100%;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+
+            transform: rotate(45deg);
+           border: solid 1px;
+        }
+
+        .red-box {
+            background-color: red;
+            margin-right: 120px;
+
+        }
+
+        .green-box {
+            background-color: green;
+             margin-right: 20px;
+
+        }
+
+        .blue-box {
+            background-color: blue;
+             margin-left: 80px;
+        }
+
+        .boxes-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="book">
+        <div class="page cover front-cover"></div>
+        <div class="page content-page1">
+            Página 2
+            <div class="boxes-container">
+                <div class="box red-box" ></div>
+                <div class="box green-box"></div>
+                <div class="box blue-box"></div>
+            </div>
+        </div>
+        <div class="page content-page2">
+            <div class="pagina">Página 1</div>
+            <img src="http://www.canoas.ifrs.edu.br/site/img/logo_novo.png" alt="Logo" class="logo">
+        </div>
+        <div class="page cover back-cover"></div>
+    </div>
+</body>
+</html>

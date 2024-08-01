@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Posicionamento</title>
+    <style>
+      .center {
+        margin: 0 auto;
+        border-radius: 50%;
+        border: 3px solid black;
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        background-color: Gainsboro;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+      }
+      .bolinhas {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: black;
+        font-size: 40px;
+        border: 3px solid black;
+        font-family: Arial;
+      }
+      .x {
+        background-color: blue;
+      }
+      .y {
+        background-color: green;
+      }
+      .a {
+        background-color: red;
+      }
+      .b {
+        background-color: yellow;
+      }
+      .width {
+        width: 60%;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid black;
+        background-color: red;
+        line-height: 30px;
+        text-align: center;
+        font-size: 25px;
+      }
+      .blue {
+        background-color: blue;
+        float: right;
+      }
+      .red {
+        background-color: red;
+        float: left;
+      }
+      .dez {
+        width: 10%;
+        height: 30px;
+        border: 3px solid black;
+        line-height: 30px;
+        text-align: center;
+        font-size: 25px;
+        margin-top: 30px;
+      }
+      .boxs {
+        font-size: 25px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+      }
+      .box1,
+      .box2,
+      .box3,
+      .box4 {
+        border: 2px solid black;
+        width: 150px;
+        height: 150px;
+      }
+      .box2 {
+        text-align: end;
+      }
+      .box4 {
+        display: flex;
+        align-items: end;
+        justify-content: end;
+      }
+      .box3 {
+        display: flex;
+        align-items: end;
+        justify-content: start;
+      }
+      .box5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid black;
+        width: 150px;
+        height: 150px;
+        margin-top: 50px;
+        margin-left: 70px;
+        position: relative;
+        background-color: white;
+      }
+      .container-y-a {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="center">
+        <div class="bolinhas x">X</div>
+        <div class="container-y-a">
+          <div class="bolinhas y">Y</div>
+          <div class="bolinhas a">A</div>
+        </div>
+        <div class="bolinhas b">B</div>
+      </div>
+    </div>
+
+    <div class="width">width: 60%</div>
+    <div class="width blue">width: 60%</div>
+    <div class="width red">width: 60%</div>
+    <div class="width blue">width: 60%</div>
+
+    <div style="display: flex; width: 100%">
+      <span class="dez">10%</span>
+      <span class="dez" style="flex-grow: 1; text-align: center">80%</span>
+      <span class="dez">10%</span>
+    </div>
+    <br />
+    <div class="boxs">
+      <div class="box1">
+        1
+        <div class="box5">5</div>
+      </div>
+      <div class="box2">2</div>
+    </div>
+    <div class="boxs">
+      <div class="box3">3</div>
+      <div class="box4">4</div>
+    </div>
+  </body>
+</html>

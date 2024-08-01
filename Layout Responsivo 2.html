@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Responsivo</title>
+<style>
+  body {
+    margin: 0;
+        font-family: Arial;
+
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .black {
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    padding: 15px;
+    width: 100%;
+
+  }
+
+  .DarkBlue {
+    background-color: DarkBlue;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
+
+  }
+
+  .DarkRed {
+    background-color: DarkRed;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
+    margin: 15px;
+  }
+
+  .green {
+    background-color: green;
+    color: white;
+    font-size: 17px;
+    padding: 15px;
+    width: 125px;
+
+  }
+
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin: 15px;
+  }
+
+  .boxes-container {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+
+  footer {
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 10px;
+    width: 100%;
+  }
+
+</style>
+</head>
+<body>
+  <div class="black">Título</div>
+  <div class="DarkBlue">Link 1  Link 2  Link 3  Link 4  Link 5</div>
+  <div class="container">
+    <div class="green"> 
+      Categoria 1<br><br><br>Categoria 2<br><br><br>Categoria 3<br><br><br>Categoria 4
+    </div>
+    <div class="boxes-container">
+      <div class="DarkRed">Seção</div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+
+    </div>
+  </div></div>
+  <footer>By Eu - 2015</footer>
+</body>
+</html>
